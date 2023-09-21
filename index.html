@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<!-- <link rel='preconnect' href='https://fonts.googleapis.com'/>
+		<link rel='preconnect' href='https://fonts.gstatic.com' crossorigin />
+		<link href='https://fonts.googleapis.com/... ??...' />-->
+
+		<title>PaisesDelMundo</title>
+
+		<link href="main.css" rel="stylesheet">
+		<link href="./css/contenedorPais.css" rel="stylesheet">
+		<link href="./css/contenedorInfoPais.css" rel="stylesheet">
+
+		<script type="module" src='./js/main.js' defer></script>
+	</head>
+
+	<body id='body'>
+		<main class='main'>
+			<section class='header'>
+				<h1 class='header__titulo'>Países del Mundo</h1>
+			</section>
+
+			<section class='separador'>
+				<select class='separador__item' id='seleccion__continente'>
+					<option selected>Continente</option>
+					<option>Africa</option>
+					<option>América norte</option>
+					<option>América sur</option>
+					<option>Asia</option>
+					<option>Europa</option>
+					<option>Oceanía</option>
+					<option>Antártida</option>
+					<option>Todos</option>
+				</select>
+
+				<input placeholder="Buscar país" type='text' id='busca__paises'>
+				<button id='boton__buscaPaises'>
+					<img src="./assets/img/lupa.png" id='img__lupa'>
+				</button>
+			</section>
+
+			<section class='grid__paises'>
+				<div class='mostrar__paises' id='respuesta'></div>
+			</section>
+		</main>
+
+	</body>
+</html>

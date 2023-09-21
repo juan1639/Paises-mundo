@@ -1,0 +1,174 @@
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+:root {
+	--gris-claro: rgb(220, 220, 220);
+	--gris-claro-alpha: rgba(220, 220, 220, 0.6);
+	--blanco: rgb(240, 240, 240);
+	--blanco-alpha: rgba(240, 240, 240, 0.6);
+	--blanco-alpha8: rgba(240, 240, 240, 0.8);
+	--gris-medio: rgba(110, 110, 110);
+	--gris-medio2: rgba(95, 95, 95);
+	--gris-medio-oscuro:  rgb(65, 65, 65);
+	--gris-oscuro: rgb(45, 45, 45);
+	--verde: rgb(10, 240, 15);
+	--verde_alpha: rgba(10, 240, 15, 0.6);
+	--azul-sombraSeparador: rgb(2, 225, 245);
+	--azul-fondo: rgb(10, 15, 155);
+	--azul-alpha2: rgba(10, 25, 230, 0.2);
+	--azul-alpha4: rgba(10, 25, 230, 0.4);
+	--azul-alpha6: rgba(10, 25, 230, 0.6);
+	--azul-alpha8: rgba(10, 25, 230, 0.8);
+}
+
+html, body {
+	width: 100%;
+	height: 100%;
+}
+
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-size: cover;
+	background-attachment: fixed;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-color: rgb(10, 15, 155);
+	background-image: url('./assets/img/mapa-mundi-3d-model.jpg');
+	/*background-image: url('https://cdn.pixabay.com/photo/2016/11/29/05/45/astronomy-1867616_1280.jpg');*/
+	/*background-image: url('https://cdn.pixabay.com/photo/2015/08/28/11/27/space-911785_1280.jpg');*/
+	/*background-image: url('https://cdn.pixabay.com/photo/2017/11/11/21/35/3d-model-2940610_1280.jpg');*/
+	/*background-image: url('https://cdn.pixabay.com/photo/2012/01/09/09/59/earth-11595_1280.jpg');*/
+}
+
+.main {
+	width: 100%;
+	height: inherit;
+	display: block;
+	justify-content: inherit;
+	align-items: inherit;
+}
+
+.header {
+	width: 100%;
+	height: 11%;
+	padding: 1% 5% 5% 5%;
+	display: inherit;
+	justify-content: inherit;
+	align-items: inherit;
+}
+
+.header__titulo {
+	color: var(--blanco-alpha);
+	font-size: 32px;
+	text-shadow: 4px 2px 5px var(--gris-medio);
+}
+
+.separador {
+	width: 100%;
+	height: 10%;
+	/*border: 1px solid var(--gris-oscuro);*/
+	border-width: 1px 0 1px 0;
+	border-style: solid;
+	border-color: var(--azul-alpha6);
+	color: var(--blanco);
+	background-color: var(--azul-alpha2);
+	display: flex;
+	align-items: center;
+	box-shadow: 0 4px 9px rgb(2, 225, 245);
+	padding: 0 5% 0 5%;
+}
+
+.separador__item {
+	width: 40%;
+	height: 80%;
+	border-radius: 5px;
+	border-color: var(--azul-alpha4);
+	margin-right: 1%;
+	padding: 0 1% 0 2%;
+	font-size: 24px;
+	text-shadow: 3px 3px 2px black;
+	color: var(--blanco);
+	background-color: inherit;
+}
+
+.separador__item:hover {
+	background-color: var(--azul-alpha6);
+}
+
+.separador__item:focus {
+	outline: none;
+}
+
+#busca__paises {
+	width: 45%;
+	height: 60%;
+	border: none;
+	font-size: 24px;
+	font-style: italic;
+	font-weight: 400;
+	color: #222;
+	border-radius: 1rem 0 0 1rem;
+	padding: 1% 0 1% 2%;
+	margin-left: 2%;
+	background-color: var(--blanco-alpha8);
+}
+
+#busca__paises:focus {
+	outline: none;
+}
+
+#boton__buscaPaises {
+	width: 5%;
+	height: 60%;
+	border: none;
+	border-radius: 0 1rem 1rem 0;
+	cursor: pointer;
+	background-color: var(--azul-alpha4);
+	transition: background-color 0.4s ease-in-out;
+}
+
+#boton__buscaPaises: focus {
+	outline: none;
+}
+
+#boton__buscaPaises:hover {
+	background-color: royalblue;
+}
+
+#boton__buscaPaises:active {
+	transform: translate(-3px, -2px);
+}
+
+@media screen and (max-width: 630px) {
+	.separador {
+		display: block;
+		height: 20%;
+	}
+
+	.separador__item {
+		margin-top: 1%;
+		width: 95%;
+		height: 35%;
+	}
+
+	#busca__paises {
+		margin-top: 2%;
+		width: 80%;
+		height: 35%;
+		border-radius: 1rem;
+		/*padding: 1% 1% 1% 2%;*/
+	}
+
+	#boton__buscaPaises {
+		margin-top: 2%;
+		width: 9%;
+		height: 35%;
+		border-radius: 50%;
+	}
+}
+

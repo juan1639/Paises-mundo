@@ -1,0 +1,99 @@
+.grid__paises {}
+
+.mostrar__paises {
+	width: 100%;
+	height: fit-content;
+	padding: 10px;
+	/*border: 2px solid red;*/
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 10px;
+	overflow: hidden;
+}
+
+.mostrar__paises__contenedor {
+	width: 300px;
+	height: 250px;
+	border-radius: 0.5rem;
+	background-color: var(--blanco-alpha8);
+	display: block;
+	align-content: center;
+	align-items: center;
+	overflow: hidden;
+	box-shadow: 5px 5px 4px black;
+	transition: transform 0.3s;
+}
+
+.mostrar__paises__contenedor:hover {
+	transform: translate(-12px, -12px);
+	box-shadow: 25px 20px 19px black;
+}
+
+.mostrar__paises__bandera {
+	width: 100%;
+	height: 76%;
+	/*margin: 10px 0 0 -125px;*/
+}
+
+.div__infoPais {
+	width: 100%;
+	height: 30%;
+	display: flex;
+}
+
+h5 {
+	width: 65%;
+	height: 50%;
+	font-size: 24px;
+	text-align: center;
+	margin: 2% 2% 2% 3%;
+	color: var(--gris-oscuro);
+	overflow: hidden;
+}
+
+.mostrar__paises__botonVerInfo {
+	width: 28%;
+	height: 50%;
+	border: none;
+	border-radius: 20px;
+	color: white;
+	background-color: var(--gris-medio);
+	text-align: center;
+	font-size: 14px;
+	font-weight: 400;
+	margin: 2% 1% 2% 0;
+	box-shadow: inset -2px -2px 3px rgba(35, 35, 35, 1);
+	cursor: pointer;
+	transition: background-color 0.4s ease-in-out;
+}
+
+.mostrar__paises__botonVerInfo:hover {
+	background-color: var(--gris-claro);
+}
+
+.mostrar__paises__botonVerInfo:active {
+	transform: translate(-3px, -3px);
+}
+
+.msgErrorBusqueda {
+	width: 90%;
+	height: 20%;
+	font-size: 32px;
+	text-align: center;
+	font-style: italic;
+	margin: 20px 0 10px 12px;
+	color: red;
+	text-shadow: 2px 2px 8px black;
+}
+
+@media screen and (max-width: 935px) {
+	.mostrar__paises {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+@media screen and (max-width: 630px) {
+	.mostrar__paises {
+		grid-template-columns: repeat(1, 1fr);
+	}
+}
